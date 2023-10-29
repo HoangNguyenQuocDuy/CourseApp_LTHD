@@ -35,8 +35,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'courses.apps.CoursesConfig'
+    'courses.apps.CoursesConfig',
+    'ckeditor',
+    'ckeditor_uploader'
 ]
+
+CKEDITOR_UPLOAD_PATH = "images/lessons/"
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -80,6 +85,8 @@ DATABASES = {
         'HOST': ''  # mặc định localhost
     }
 }
+
+MEDIA_ROOT = '%s/courses/static/' % BASE_DIR
 
 import pymysql
 
